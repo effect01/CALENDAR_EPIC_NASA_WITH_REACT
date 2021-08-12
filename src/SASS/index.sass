@@ -1,0 +1,119 @@
+body
+    margin: 0
+    margin-top: 0
+    width: 100%
+    height: 100%
+
+.App 
+    background: #202020
+    >div
+        width: 90%
+        margin: auto
+        padding-bottom: 120px
+
+.title
+    text-align: center
+    padding: 40px
+    color: white
+    font-size: 20px
+.app-container
+    display: grid
+    grid-template-columns: 30% 60%
+    justify-content: space-around
+
+.calendar
+    width: 100%
+    height: fit-content
+    margin-bottom: 20px
+    justify-content: center
+    background: #ececec
+    border-radius: 40px
+    .calendar--years--month
+        display: flex
+        background: #f55858
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-size: 30px
+        font-weight: 800
+        padding: 20px
+        div.arrows     
+            align-items: center
+            text-align: center
+            font-size: 30px
+            cursor: pointer
+            margin: auto 
+            color: #8023ff
+            transition: all 0.3s ease-in-out
+            &.left
+                margin-right: 10px
+            &.right
+                margin-left: 10px
+            &:hover
+                font-size: 40px
+                color: #2382ff
+    .calendar--days--of--weak
+        background: #fceded
+        display: grid
+        grid-template-columns: repeat(7,minmax(30px,600px) )
+        font-size: 17px
+        padding: 2px
+        font-size: 1vw
+        text-align: center
+        .calendar--days--of--weak--day
+            overflow: hidden
+    .calendar--days
+        display: grid
+        font-size: 17px
+        cursor: pointer
+        justify-content: center
+        text-align: left
+        border-radius: 40px
+        grid-template-columns: repeat(7, minmax(10px, 600px))
+        grid-auto-rows: minmax(10px, 100%)
+        height: 30vw
+        min-height: 400px
+      
+        div
+            padding: 8px
+        .calendar--days--day
+            background: #ff171700
+            transition: .2s ease-in-out all
+            &:hover
+                background: #84d8ff91
+            &.active
+                background: #afc4ff49
+            &.desactivate
+                cursor: not-allowed
+                background: #18181846
+                opacity: 0.5
+
+.epic-container
+    max-height: 760px
+    background: #5858581e
+    border-radius: 40px
+    text-align: center
+    overflow-y: auto 
+    color: white
+    .epic-pictures
+        display: grid
+        margin: auto
+        grid-template-columns: repeat(auto-fill, minmax(100px, 270px))
+        grid-template-rows: 300px
+        grid-gap: 30px
+        justify-content: center
+        .epic-pictures--picture
+            justify-content: center
+            align-content: center
+            img
+                width: 100%
+
+@media (max-width: 990px) 
+    .app-container
+        display: block
+        justify-content: space-around
+        .calendar--days--of--weak
+            font-size: 3vw!important
+    .epic-container
+        overflow-y: unset!important
+        max-height: fit-content
