@@ -13,8 +13,6 @@ You need have npm 6.14.8v (nodejs v14.15.1+)  !
    ```
 2. **Start the project :D.**
 
-   Start the api and the client side application following this command:
-
    ```shell
 
     npm start
